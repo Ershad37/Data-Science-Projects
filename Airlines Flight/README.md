@@ -52,7 +52,6 @@ departure_time – Scheduled departure time
 
 arrival_time – Scheduled arrival time
 
-Note: The dataset should be placed in the path /Users/ershadali/Desktop/DataSets/airlines_flights_data.csv or update the script with your path.
 
 # Features
 
@@ -97,13 +96,13 @@ df_flights = df_flights_raw.copy(deep=False)
 
 Perform analysis:
 
-# Summarize flight duration and price by airline
+Summarize flight duration and price by airline
 df_flights.groupby("airline").sum(numeric_only=True)
 
-# Most crowded routes
+Most crowded routes
 df_flights.value_counts(["source_city", "destination_city"]).head(3)
 
-# Cheapest flight per airline
+Cheapest flight per airline
 df_flights.groupby("airline").min()
 
 
